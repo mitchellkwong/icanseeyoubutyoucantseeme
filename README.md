@@ -13,7 +13,7 @@ Message other registered users with `@username <message>`: The registered user w
 Users can be set up into loops where they can message the next person in the loop with `@buayee <message>` 
 and the previous person in the loop with `@buaya <message>`.
 
-# Dependencies & Setup
+## Dependencies & Setup
 
 The project runs on python 3.? and uses the `python-telegram-bot` package. Grab it with:
 
