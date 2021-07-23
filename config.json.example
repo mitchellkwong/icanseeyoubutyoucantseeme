@@ -1,0 +1,7 @@
+{
+    "token": "your bot token here",
+    "chains": [
+        ["@username1", "@username2", "@username3"],
+        ["@username4", "@username5"]
+    ]
+}
