@@ -18,15 +18,20 @@ class Forward:
         user = match.group(1)
         text = match.group(2)
         
-        update.message
+        # Handle unregistered users
+        if sender not in context.bot_data['users']:
+            update.message.reply_text('/register to send messages through me!')
+            return
 
         # For buayabuayee, antialias the reciever
         if user == '@buaya':
-            user = context.bot_data['buayas'].get(sender, None)
+            receiver = context.bot_data['buayas'].get(sender, None)
         elif user == '@buayee':
-            user = context.bot_data['buayees'].get(sender, None)
+            receiver = context.bot_data['buayees'].get(sender, None)
+        else:
+            receiver = user
         
-        user_id = context.bot_data['users'].get(user, None)
+        user_id = context.bot_data['users'].get(receiver, None)
 
         # For buayabuayee, alias the sender
         if user in '@buaya@buayee':

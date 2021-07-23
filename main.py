@@ -1,6 +1,5 @@
 import json
 import logging
-from telegram import update
 
 from telegram.ext import Updater, PicklePersistence
 from telegram.ext.commandhandler import CommandHandler
@@ -60,10 +59,6 @@ def main():
     updater.dispatcher.bot_data['buayees'] = buayees
     if 'users' not in updater.dispatcher.bot_data:
         updater.dispatcher.bot_data['users'] = dict()
-
-    # print(buayas)
-    # print(buayees)
-    # return
 
     # Start bot
     updater.start_polling()

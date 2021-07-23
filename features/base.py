@@ -6,7 +6,7 @@ from telegram.ext import (
 
 class Start:
     command = 'start'
-    help_text = 'Add your username from our records to message other users'
+    help_text = 'Get some bot info'
 
     def __init__(self):
         self.handler = CommandHandler(self.command, self.callback)

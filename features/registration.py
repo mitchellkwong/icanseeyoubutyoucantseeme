@@ -2,12 +2,11 @@ from telegram import Update
 from telegram.ext import (
     CallbackContext,
     CommandHandler,
-    commandhandler,
 )
 
 class Register:
     command = 'register'
-    help_text = 'Add your username from our records to message other users'
+    help_text = 'Add your username to our records'
 
     def __init__(self):
         self.handler = CommandHandler(self.command, self.callback)
@@ -24,7 +23,7 @@ class Register:
 
 class Unregister:
     command = 'unregister'
-    help_text = 'Removes your username from our records'
+    help_text = 'Remove your username from our records'
 
     def __init__(self):
         self.handler = CommandHandler(self.command, self.callback)
