@@ -7,9 +7,11 @@ games and includes specific features geared towards this.
 ## Features
 
 **Anonymous Messaging**
-Message other registered users with `@username <message>`: The registered user will only receive `<message>`.
+
+Message other registered users with `@username <message>`. The registered user will only receive `<message>`.
 
 **Automatic Aliasing**
+
 Users can be set up into loops where they can message the next person in the loop with `@buayee <message>` 
 and the previous person in the loop with `@buaya <message>`.
 
