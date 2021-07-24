@@ -13,9 +13,9 @@ class Forward:
         self.handler = MessageHandler(Filters.regex(self.pattern), self.callback)
     
     def callback(self, update: Update, context: CallbackContext):
-        sender = update.effective_user.name
+        sender = update.effective_user.name.lower()
         match = self.pattern.match(update.message.text)
-        user = match.group(1)
+        user = match.group(1).lower()
         text = match.group(2)
         
         # Handle unregistered users

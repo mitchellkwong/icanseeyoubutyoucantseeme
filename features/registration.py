@@ -12,7 +12,7 @@ class Register:
         self.handler = CommandHandler(self.command, self.callback)
 
     def callback(self, update: Update, context: CallbackContext):
-        user = update.effective_user.name
+        user = update.effective_user.name.lower()
         chat = update.message.chat_id
         context.bot_data['users'][user] = chat
         update.message.reply_markdown(

@@ -48,8 +48,8 @@ def main():
     for chain in config['chains']:
         n = len(chain)
         for i in range(n):
-            buaya = chain[i]
-            buayee = chain[(i+1)%n] # Chain loops back to start
+            buaya = chain[i].lower()
+            buayee = chain[(i+1)%n].lower() # Chain loops back to start
             buayas[buayee] = buaya # wtf
             buayees[buaya] = buayee # wtf again
 
@@ -59,6 +59,9 @@ def main():
     updater.dispatcher.bot_data['buayees'] = buayees
     if 'users' not in updater.dispatcher.bot_data:
         updater.dispatcher.bot_data['users'] = dict()
+
+    print('buayas\n', buayas)
+    print('buayees\n', buayees)
 
     # Start bot
     updater.start_polling()
